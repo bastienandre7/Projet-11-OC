@@ -1,0 +1,86 @@
+.accountE {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: #303030;
+    color: #fff;
+    width: 80%;
+    margin: 0 auto;
+    flex-direction: row;
+    padding: 1.5rem;
+    box-sizing: border-box;
+    text-align: left;
+    margin-bottom: 2rem;
+}
+
+.accountE-amount {
+    margin: 0;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.accountE-amount-description {
+    margin: 0;
+}
+
+.accountE-title {
+    margin: 0;
+    padding: 0;
+    font-size: 1rem;
+    font-weight: normal;
+}
+
+.accountE-content-wrapper {
+    width: 100%;
+    flex: 1;
+}
+
+.chevron {
+    display: flex;
+    justify-content: right;
+}
+
+.transaction-button {
+    display: block;
+    width: 100%;
+    padding: 8px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-top: 1rem;
+    border-color: #00bc77;
+    background-color: #00bc77;
+    color: #fff;
+}
+
+.table{
+    border-radius: 15px;
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+}
+
+table{
+    border-collapse: collapse;
+    border-spacing: 5em;
+}
+
+.openAccount{
+    cursor: pointer;
+}
+
+
+@media (min-width: 720px) {
+    .account {
+        flex-direction: row;
+    }
+
+    .account-content-wrapper.cta {
+        flex: 0;
+    }
+
+    .transaction-button {
+        width: 200px;
+    }
+}

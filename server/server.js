@@ -36,3 +36,7 @@ app.get('/', (req, res, next) => {
 app.listen(PORT, () => {
   console.log(`Server listening on http://localhost:${PORT}`)
 })
+
+app.post("/login", async(req,res) => {
+  const { userName, password } = req.body;
+})

@@ -31,6 +31,14 @@
     font-size: 5rem;
 }
 
+.classe_erreur{
+    color: white;
+    background-color: red;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px 20%;
+}
+
 .input-wrapper {
     display: flex;
     flex-direction: column;

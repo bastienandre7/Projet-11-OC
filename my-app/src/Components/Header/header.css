@@ -19,6 +19,14 @@
     color: #42b983;
 }
 
+.cursor{
+    cursor: pointer;
+}
+
+.paddingRight{
+    padding-right: 5px;
+}
+
 .sr-only {
     border: 0 !important;
     clip: rect(1px, 1px, 1px, 1px) !important; /* 1 */
