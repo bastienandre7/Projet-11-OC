@@ -1,0 +1,53 @@
+.navigation{
+    display: flex;
+    justify-content: space-between;
+}
+
+.logoEdit{
+    margin-left: 10%;
+    margin-top: 50px;
+}
+
+.infoNav{
+    display: flex;
+    flex-direction: row;
+    vertical-align: middle;
+    justify-content: space-between;
+    gap: 40px;
+    margin-right: 10%;
+    margin-top: 30px;
+}
+
+.infoUser{
+    display: flex;
+    flex-direction: row;
+}
+
+.userNameP{
+    color: #00bc77;
+    font-weight: 600;
+    font-size: large;
+    margin-right: 15px;
+}
+
+.bust{
+    padding: 15px;
+    color: white;
+}
+
+.bustBackground{
+    background-color: #00bc77;
+    width: 62px;
+    height: 62px;
+    border-radius: 50px;
+}
+
+.gear{
+    color: #00bc77;
+    padding-top: 5px;
+}
+
+.power{
+    color: #00bc77;
+    padding-top: 5px;
+}

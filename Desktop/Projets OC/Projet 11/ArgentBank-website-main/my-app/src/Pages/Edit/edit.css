@@ -1,0 +1,49 @@
+.formEdit{
+    display: table;
+    margin: 0% 40% 20px;
+}
+
+.buttonSaveCancel{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.boutonEdit{
+    border: none;
+    background-color: #00bc77;
+    cursor: pointer;
+    padding: 10px 40px;
+    width: 150px;
+    height: 40px;
+    color: white;
+    margin: 3px;
+    border-radius: 5px;
+}
+
+.title-edit{
+    font-weight: 400;
+}
+
+.input-edit{
+    width: 120px;
+    height: 25px;
+    padding-left: 5px;
+    margin-left: 5px;
+    border-radius: 5px;
+    border-color: #D3D3D3;
+    border-width: 1px;
+    border-style:solid
+}
+
+.grey-input{
+    background-color: #D3D3D3;
+    color: grey;
+}
+
+.display-form{
+    display: flex;
+    justify-content: right;
+    margin-bottom: 10px;
+}

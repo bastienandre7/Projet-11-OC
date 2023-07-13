@@ -1,0 +1,51 @@
+.rowData{
+    background-color: #00bc77;
+    border-radius: 15px;
+    color: white;
+    width: 80%;
+    padding-top: 10px;
+    background-clip: padding-box;
+}
+
+.firstTopTD{
+    border-top-left-radius: 5px;
+}
+
+.lastTopTD{
+    border-top-right-radius: 5px;
+}
+
+.firstBotTD{
+    border-bottom-left-radius: 5px;
+}
+
+.lastBotTD{
+    border-bottom-right-radius: 5px;
+}
+
+td{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+.buttonCollapse{
+    cursor: pointer;
+}
+
+.space{
+    margin-top: 10px;
+}
+
+.select{
+    background-color: #00bc77;
+    border-style: none;
+    color: white;
+    /* -webkit-appearance: none;
+    -moz-appearance: none; */
+    position: relative;
+}
+
+
+

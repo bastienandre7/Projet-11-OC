@@ -1,8 +1,21 @@
+.footer{
+    
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    padding: 2rem 0 1.5rem;
+}
+
+footer{
+    position: absolute;
+    width: 100%;
+}
+
+
 @media (min-width: 920px) {
     .footer {
         display: flex;
         justify-content: center;
-        border-top: 2px solid #ccc;
         padding: 2rem 0 1.5rem;
     }
     

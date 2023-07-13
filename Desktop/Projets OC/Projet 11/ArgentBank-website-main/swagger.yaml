@@ -101,6 +101,81 @@ paths:
           description: Invalid Fields
         '500':
           description: Internal Server Error
+  /user/account:
+    get:
+      tags:
+        - User Module
+      summary: User Bank Account Information API
+      responses:
+        '200':
+          description: User Bank Account Information well returned
+          content:
+            application/json:
+              schema: 
+                type: array
+                items:
+                  type: object
+                  properties:
+                    balance:
+                      type: string
+                      example: "$48,098.43"
+                    transactionType:
+                      type: string
+                      example: "Electronic"
+                    transactionAmount:
+                      type: string
+                      example: "$8.00"
+                    date:
+                      type: string
+                      example: "27/02/20"
+                    description:
+                      type: string
+                      example: "Golden Sun Bakery"
+                    category:
+                      type: string
+                      example: "Food"
+        '400':
+          description: Bad request
+        '500':
+            description: Internal Server Error
+    post:
+      tags:
+        - User Module
+      summary: Add a transaction note
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              note:
+                type: string
+                example: "lorem ipsum"
+      responses:
+        '201':
+          description: Note added 
+        '400':
+          description: Bad request
+        '500':
+          description: Internal Server Error
+    put:
+      tags:
+        - User Module
+      summary: Update transaction category
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              category:
+                type: string
+                example: "Food"
+      responses:
+        '201':
+          description: Category updated
+        '400':
+          description: Bad request
+        '500':
+          description: Internal Server Error
 securityDefinitions:
   Bearer:
     type: apiKey
@@ -156,3 +231,30 @@ definitions:
     properties:
       userName:
         type: string
+  Transaction:
+    type: object
+    properties:
+      balance:
+        type: string
+      transactionType:
+        type: string
+      transactionAmount:
+        type: string
+      date:
+        type: string
+      description:
+        type: string
+      category:
+        type: string
+      note:
+        type: string
+  Note:
+    type: object
+    properties:
+      note:
+        type: string
+  Category:
+    type: object
+      properties:
+        category:
+          type: string

@@ -1,5 +1,7 @@
 .main {
     flex: 1;
+    position: relative;
+    min-height: 80vh;
 }
 
 .bg-dark {
@@ -31,4 +33,8 @@
 .header {
     color: #fff;
     margin-bottom: 2rem;
+}
+
+.modal {
+    display: none;
 }
