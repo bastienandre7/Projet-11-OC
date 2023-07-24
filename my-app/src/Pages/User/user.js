@@ -20,6 +20,8 @@ const User = () => {
     }
 
     useEffect(() => {
+
+        const postInfo = () => {
             fetch('http://localhost:3001/api/v1/user/profile', {
             method: "POST",
             headers: {
@@ -35,8 +37,9 @@ const User = () => {
                     } else {
                         navigate('/')
                     }
-                })
+                })}
                 
+        postInfo();
     })
 
 

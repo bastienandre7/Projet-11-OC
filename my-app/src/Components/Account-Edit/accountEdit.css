@@ -72,11 +72,11 @@ table{
 
 
 @media (min-width: 720px) {
-    .account {
+    .accountE {
         flex-direction: row;
     }
 
-    .account-content-wrapper.cta {
+    .accountE-content-wrapper.cta {
         flex: 0;
     }
 

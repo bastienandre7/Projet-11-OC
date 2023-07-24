@@ -8,6 +8,7 @@ const TableData = (props) => {
 
     return (
         <>
+            <thead><tr><td></td><td></td><td></td><td></td><td></td></tr></thead>
             <tbody className='rowData'>
                 <tr>
                     <td className='firstTopTD'>27/02/20</td>
@@ -31,7 +32,6 @@ const TableData = (props) => {
                     <tr>
                         <td>Category</td>
                         <td>
-                            <div>
                                 <select className='select'>
                                     <option value="0">Food</option>
                                     <option value="1">Accommodation</option>
@@ -42,7 +42,6 @@ const TableData = (props) => {
                                     <option value="6">Assurance</option>
                                     <option value="7">Animals</option>
                                 </select>
-                            </div>
                         </td>
                         <td></td>
                         <td></td>
@@ -58,7 +57,6 @@ const TableData = (props) => {
                     </>
                 }
             </tbody>
-            <div className='space'></div>
         </>
     )
 }

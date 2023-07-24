@@ -3,12 +3,13 @@ import './header.css';
 import Logo from '../../assets/header/argentBankLogo.png';
 import {NavLink, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from 'react-redux';
-import { logout, selectUser } from "../../userSlice";
+import { logout, selectUser, selectName } from "../../userSlice";
 
 const Header = () => {
     const navigate = useNavigate();
 
     const user = useSelector(selectUser);
+    const userName = useSelector(selectName);
 
     const dispatch = useDispatch();
 
@@ -30,10 +31,16 @@ const Header = () => {
                 </NavLink>
                 <div>
                     {user ?  
-                        <a onClick={logOut} className="main-nav-item cursor">
-                        <i className="fa fa-user-circle paddingRight"></i>
-                            Log Out
+                    <div>
+                        <a className="main-nav-item cursor">
+                            <i className="fa fa-user-circle paddingRight"></i>
+                            {userName}
                         </a>
+                        <a onClick={logOut} className="main-nav-item cursor">
+                        <i className="fa-solid fa-right-from-bracket"></i>
+                            Sign Out
+                        </a>
+                    </div>
                     : 
                         <NavLink to="/signIn" className="main-nav-item">
                         <i className="fa fa-user-circle paddingRight"></i>

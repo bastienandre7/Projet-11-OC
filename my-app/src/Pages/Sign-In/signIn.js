@@ -1,17 +1,17 @@
 import React, { useState } from 'react';
 import './signIn.css';
 import Header from '../../Components/Header/header';
-import {NavLink, useNavigate } from "react-router-dom";
-import { useDispatch, useSelector } from 'react-redux';
-import { login, selectUser } from "../../userSlice";
+import { useNavigate } from "react-router-dom";
+import { useDispatch } from 'react-redux';
+import { login } from "../../userSlice";
 
 
 const SignIn = () => {
     
     const navigate = useNavigate();
 
-    const [emailSubmit, setEmail] = useState();
-    const [passwordSubmit, setPassword] = useState();
+    const [emailSubmit, setEmail] = useState("");
+    const [passwordSubmit, setPassword] = useState("");
 
     const dispatch = useDispatch();
 
@@ -19,8 +19,6 @@ const SignIn = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        console.log(emailSubmit)
-        console.log(passwordSubmit)
         const logIn = await fetch('http://localhost:3001/api/v1/user/login', {
         method: "POST",
         headers: {
@@ -28,8 +26,8 @@ const SignIn = () => {
             'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-            "email": "tony@stark.com",
-            "password": "password123"
+            "email": emailSubmit,
+            "password": passwordSubmit
             })     
         });
 
@@ -54,8 +52,6 @@ const SignIn = () => {
     }
 
 
-
-
     return (
         <>
             <Header />
@@ -66,20 +62,16 @@ const SignIn = () => {
                     <form onSubmit={handleSubmit} id="form">
                         <div className="input-wrapper">
                             <label htmlFor="email">Email </label>
-                            <input type="text" id="username" defaultValue="tony@stark.com" onChange={(e) => setEmail(e.target.value)} />
+                            <input type="text" id="username"  onChange={(e) => setEmail(e.target.value)} />
                         </div>
                         <div className="input-wrapper">
                             <label htmlFor="password">Password </label>
-                            <input type="password" id="password" defaultValue="password123" onChange={(e) => setPassword(e.target.value)} />
+                            <input type="password" id="password"  onChange={(e) => setPassword(e.target.value)} />
                         </div>
                         <div className="input-remember">
                             <input type="checkbox" id="remember-me" /><label htmlFor="remember-me">Remember me </label>    
                         </div>
-                        {/* PLACEHOLDER DUE TO STATIC SITE */}
-                        {/* <NavLink to="/user" className="sign-in-button">Sign In</NavLink> */}
-                        {/* SHOULD BE THE BUTTON BELOW */}
                         <button className="sign-in-button" type="submit">Sign In</button>
-                        {/*  */}
                     </form>
                 </section>
                 <div id='error'></div>
